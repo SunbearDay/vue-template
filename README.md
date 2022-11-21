@@ -1,29 +1,15 @@
 # vue-template
 
-This template should help get you started developing with Vue 3 in Vite.
+Basic Vuejs template to start up a project quickly.
 
-## Recommended IDE Setup
+## Packages installed
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- Vue Router
+- Pinia
 
-## Customize configuration
+## Todos
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+- [] Initiate a basic store structure.
+- [] Add a component that demonstrates using Pinia.
+- [] Remove default components.
+- [] Update main nav link colors and hover states.

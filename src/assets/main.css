@@ -1,35 +1,98 @@
-@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+:root {
+  --font-size-base: calc(16 / 16);
+  --font-size-desktop: calc(20 / 16);
+  --font-size-900: calc(var(--font-size-base) * 4.209em);
+  --font-size-800: calc(var(--font-size-base) * 3.157em);
+  --font-size-700: calc(var(--font-size-base) * 2.369em);
+  --font-size-600: calc(var(--font-size-base) * 1.777em);
+  --font-size-500: calc(var(--font-size-base) * 1.333em);
+  --font-size-400: calc(var(--font-size-base) * 1em);
+  --font-size-300: calc(var(--font-size-base) * 0.75em);
+  --font-size-200: calc(var(--font-size-base) * 0.563em);
+  --font-size-100: calc(var(--font-size-base) * 0.422em);
 
-  font-weight: normal;
+  --font-family: 'Inter', sans-serif;
+
+  --color-black: hsl(0 0% 0%);
+  --color-white: hsl(0 0% 100%);
+
+  --color-text: var(--color-black);
+  --color-background: var(--color-white);
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+
+:is(*, *::before, *::after) {
+  box-sizing: border-box;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+* {
+  margin: 0;
+}
+
+/* Use percentage based heights. 
+  Add the #app id for the vue.js layout.
+*/
+:is(html, body, #app) {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  line-height: 1.5;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+:is(input, button, textarea, select) {
+  font: inherit;
+}
+
+:is(p, h1, h2, h3, h4, h5, h6) {
+  overflow-wrap: break-word;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: var(--font-size-700);
+}
+
+h2 {
+  font-size: var(--font-size-600);
+}
+
+h3 {
+  font-size: var(--font-size-500);
+}
+
+h4 {
+  font-size: var(--font-size-400);
+}
+
+h5 {
+  font-size: var(--font-size-300);
+}
+
+h6 {
+  font-size: var(--font-size-200);
+}
+
+p {
+  font-size: var(--font-size-400);
+}
+
+@media (min-width: 37.5rem) {
+  :root {
+    --font-size-base: var(--font-size-desktop);
   }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-}
