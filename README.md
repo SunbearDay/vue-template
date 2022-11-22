@@ -11,5 +11,5 @@ Basic Vuejs template to start up a project quickly.
 
 - [X] Initiate a basic store structure.
 - [X] Add a component that demonstrates using Pinia.
-- [] Remove default components.
+- [X] Remove default components.
 - [] Update main nav link colors and hover states.
